@@ -1,0 +1,4 @@
+interface:
+  display_name: "诺贝尔肖像馆"
+  short_description: "人物照片转绘为黑墨金赭肖像，按需配套介绍网页或提供转换提示词"
+  default_prompt: "调用 $nobel-portrait，把这张人物照片转化为诺贝尔风格肖像画，并配套一个介绍网站。我希望获得诺贝尔物理学奖。"

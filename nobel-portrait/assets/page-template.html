@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="$lang">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="$description">
+<title>$title</title>
+<style>
+:root{color-scheme:light;--gold:#986611;--ink:#282521;--muted:#706b64;--line:#d4d0c9;--soft:#faf8f3}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:22px}body{margin:0;background:#fff;color:var(--ink);font:15px/1.65 Arial,"Microsoft YaHei",sans-serif}
+a{color:inherit;text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:4px}a:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+.brand-wrap{height:90px;display:grid;place-items:center;border-bottom:1px solid var(--line)}.brand{color:var(--gold);font:17px/1.05 Arial,sans-serif;letter-spacing:.055em;text-align:center}.brand span{display:block}
+.topnav{min-height:51px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:26px;padding:12px 20px;font-size:13px;flex-wrap:wrap}
+.layout{max-width:1020px;margin:54px auto 70px;padding:0 24px;display:grid;grid-template-columns:215px minmax(0,1fr);gap:105px;align-items:start}
+.sidebar{border-right:1px solid var(--line);padding-right:18px;min-width:0}.sidebar h2{font-size:21px;line-height:1.4;color:var(--gold);font-weight:400;margin:0 0 16px;overflow-wrap:anywhere}
+.side-links{border-top:1px solid var(--line);padding-top:12px}.side-links a{display:block;padding:6px 0;font-size:14px}.side-links .person{padding-left:15px;overflow-wrap:anywhere}.side-links .sub{padding-left:30px;color:var(--muted)}.side-links .current{color:var(--gold)}
+.side-foot{border-top:1px solid var(--line);margin-top:17px;padding-top:13px;font-size:12px;color:var(--muted)}main{min-width:0}
+h1{font-size:38px;line-height:1.18;color:var(--gold);font-weight:400;margin:0 0 5px;overflow-wrap:anywhere}h2.section-heading{font-size:22px;line-height:1.4;font-weight:400;margin:0 0 14px}
+.creative{display:inline-block;font-size:11px;letter-spacing:.02em;color:var(--gold);background:var(--soft);padding:3px 9px;margin:0 0 14px;border:1px solid #e9e0ce}
+.facts{border-top:1px solid var(--line);padding-top:24px;display:grid;grid-template-columns:156px minmax(0,1fr);gap:25px;align-items:start}
+figure{margin:0;min-width:0}figure img{display:block;width:100%;height:auto;background:#f4f1e9}figcaption{font:11px/1.45 Georgia,"Songti SC","SimSun",serif;color:var(--muted);margin-top:7px;overflow-wrap:anywhere}
+.biography{font:15px/1.55 Georgia,"Songti SC","SimSun",serif;overflow-wrap:anywhere}.biography p{margin:0 0 18px}.biography .intro{margin-bottom:22px}.field-label{font-weight:400}
+.invented{font:10px/1.3 Arial,"Microsoft YaHei",sans-serif;color:var(--muted);white-space:nowrap;border-bottom:1px dotted #aaa;margin-left:5px;vertical-align:middle}
+.downloads{border-top:1px solid var(--line);margin-top:22px;padding-top:16px;display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--gold)}
+.citation{border-top:1px solid var(--line);margin-top:24px;padding-top:16px;font-size:11px;line-height:1.5;color:var(--muted)}.citation p{margin:0 0 9px}.back{font-size:12px;display:inline-block;margin-top:8px;color:var(--ink)}
+@media(max-width:850px){.layout{gap:38px;grid-template-columns:180px minmax(0,1fr)}.facts{grid-template-columns:135px minmax(0,1fr);gap:18px}h1{font-size:33px}}
+@media(max-width:640px){.brand-wrap{height:78px}.topnav{gap:18px}.layout{display:block;margin:28px auto 42px;padding:0 22px}.sidebar{border-right:0;border-bottom:1px solid var(--line);padding:0 0 18px;margin-bottom:27px}.sidebar h2{font-size:18px;margin-bottom:10px}.side-links{display:flex;gap:14px;flex-wrap:wrap;padding-top:8px}.side-links a,.side-links .person,.side-links .sub{padding:3px 0;font-size:12px}.side-foot{display:none}h1{font-size:32px}.facts{grid-template-columns:1fr;gap:24px}figure{width:190px;max-width:100%}.biography{font-size:16px}.downloads{margin-top:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{.topnav,.sidebar,.downloads,.back{display:none}.layout{display:block;margin:20px}.brand-wrap{height:65px}.facts{grid-template-columns:160px 1fr}.creative{border:0}}
+</style>
+</head>
+<body id="top">
+<header><div class="brand-wrap"><a class="brand" href="#top" aria-label="$brand_label"><span>NOBEL</span><span>PORTRAIT</span></a></div><nav class="topnav" aria-label="$nav_label"><a href="#profile">$profile_label</a><a href="#facts">$facts_label</a><a href="#motivation">$motivation_label</a><a href="#downloads">$downloads_label</a></nav></header>
+<div class="layout">
+<aside class="sidebar" aria-label="$sidebar_label"><h2>$prize<br>$year$year_mark</h2><nav class="side-links" aria-label="$sidebar_label"><a href="#profile">$overview_label</a><a class="person" href="#profile">$name</a><a class="sub current" href="#facts">$facts_label</a><a class="sub" href="#motivation">$motivation_label</a><a class="sub" href="#downloads">$downloads_label</a></nav><p class="side-foot">$creative_note_short</p></aside>
+<main id="profile"><h1>$name$name_mark</h1><h2 class="section-heading">$facts_label</h2><p class="creative">$creative_badge</p>
+<section class="facts" id="facts" aria-label="$facts_label"><figure><img src="$portrait_src" alt="$portrait_alt"><figcaption>$portrait_credit</figcaption></figure><div class="biography">
+<p class="intro">$name$name_mark<br>$prize$prize_mark $year$year_mark</p>
+<p><span class="field-label">$born_label</span>$birth$birth_mark<br>$birthplace$birthplace_mark</p>
+<p><span class="field-label">$affiliation_label</span>$affiliation$affiliation_mark<br>$affiliation_address$affiliation_address_mark</p>
+<p id="motivation"><span class="field-label">$motivation_label_full</span>“$motivation”$motivation_mark</p><p><span class="field-label">$share_label</span>$prize_share$prize_share_mark</p>
+</div></section>
+<nav class="downloads" id="downloads" aria-label="$downloads_label">$download_links</nav>
+<footer class="citation"><p>$citation_label<br>$citation_text</p><p>$creative_note</p><a class="back" href="#top">$back_label ↑</a></footer>
+</main></div>
+</body>
+</html>
