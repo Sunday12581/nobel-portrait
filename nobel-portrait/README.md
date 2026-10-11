@@ -40,11 +40,11 @@ python -m pip install Pillow
 将本仓库的实际 GitHub 地址交给内置安装技能，例如：
 
 ```text
-$skill-installer 从 https://github.com/<你的用户名>/nobel-portrait
+$skill-installer 从 https://github.com/Sunday12581/nobel-portrait
 安装技能。技能位于仓库根目录，包含 SKILL.md，安装名称为 nobel-portrait。
 ```
 
-把 `<你的用户名>` 替换为仓库所有者。安装后若未出现在技能列表中，可重启 Codex。
+把 `<Sunday12581>` 替换为仓库所有者。安装后若未出现在技能列表中，可重启 Codex。
 
 ### 手动安装到项目
 
